@@ -14,9 +14,9 @@
       <% } else { %>
       <ul>
         <% foods.forEach((food) => { %>
-        <form action="/users/<%user.id %>/foods/<%= food._id %>?_method=DELETE" method="POST">
+        <form action="/users/<%= user._id %>/foods/<%= food._id %>?_method=DELETE" method="POST">
             <li>
-                <%= food.name %><a href="/users/<%= user._id %>/foods/<%= food._id %>/edit"> Edit food</a> <button type="submit">Delete food</button>
+                <%= food.name %><a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">Edit food</a><button type="submit">Delete food</button>
             </li>
         </form>
         <% }) %>
